@@ -1,0 +1,166 @@
+/* Importación de fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #D9d9d9;
+    background-attachment: scroll;
+}
+
+/* Estilos para la cabecera */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b2b2b;
+    padding: 20px; /* Espaciado dentro de la cabecera */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilo para los enlaces en la cabecera */
+.header a {
+    text-decoration: none;
+    font-size: 38px; /* Tamaño de fuente */
+    color: #fff; /* Color del texto */
+    font-weight: 900; /* Grosor de la fuente */
+    font-style: italic; /* Estilo de la fuente */
+}
+
+.menu{
+    display: none;
+}
+
+.header .menu button{
+
+    margin-left: 20px;
+    font-weight: 700;
+    color: #2b2b2b;
+    padding: 9px 25px;  
+    background: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 80s,
+}
+
+.header .menu button{
+    background-color: #fff;
+    color: #2b2b2b;
+    transform: scale(1.1);
+
+}
+
+/* Estilo para el menú de navegación */
+.nav-links {
+    display: flex;
+    gap: 10px; /* Espaciado entre los enlaces */
+    align-items: center;
+}
+
+/* Estilo para los enlaces en el menú de navegación */
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: 900; /* Grosor de la fuente */
+    font-style: italic; /* Estilo de la fuente */
+    background-color: #555; /* Color de fondo */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 10px; /* Espaciado dentro de los enlaces */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+/* Cambia el color de fondo al pasar el ratón */
+.nav-links a:hover {
+    background-color: #777;
+}
+
+/* Menú desplegable (overlay) */
+.header .overlay {
+    height: 100%;
+    width: 0%; /* Ancho inicial del menú desplegable */
+    position: fixed; /* Fija el menú a la pantalla */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con opacidad */
+    overflow: hidden;
+    transition: width 0.5s ease; /* Transición suave para el ancho */
+}
+
+.header .overlay .overlay-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a {
+    padding: 15px; /* Espaciado dentro de los enlaces del menú */
+    font-size: 36px; /* Tamaño de fuente */
+    display: block;
+    transition: color 0.3s ease; /* Transición suave para el color del texto */
+    font-weight: 700; /* Grosor de la fuente */
+    color: #fff; /* Color del texto */
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus {
+    color: rgb(254, 254, 254); /* Color del texto al pasar el ratón o al enfocar */
+}
+
+.header .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Ajuste de la posición del botón de cerrar */
+    font-size: 50px; /* Tamaño del botón de cerrar */
+    color: #fff; /* Color del botón de cerrar */
+}
+
+.header .overlay a:hover{
+    transform: scale(1.1);
+}
+
+/* Estilos responsivos para pantallas de hasta 768px */
+    @media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+        padding: 10px 15px; /* Ajuste del espaciado interno */
+    }
+
+    .header a {
+        font-size: 24px; /* tamano de fuente para enlaces en pantallas más pequeñas */
+        margin-bottom: 10px; /* Espaciado inferior */
+    }
+
+    .nav-links {
+        display: none; /* Oculta los enlaces de navegación en pantallas pequeñas */
+    }
+
+    .menu {
+        display: flex; /* Muestra el menú en pantallas pequeñas */
+        gap: 15px; /* Espaciado entre los elementos del menú */
+        width: 100%; /* Asegura que el menú ocupe todo el ancho */
+        justify-content: space-around; /* Distribuye los elementos uniformemente */
+    }
+    .menu a {
+        font-size: 16px; /* Tamaño de fuente para el menú en pantallas pequeñas */
+        padding: 8px 12px; /* Espaciado dentro de los elementos del menú */
+    }
+}
+    /* Estilos responsivos para pantallas de hasta 480px */
+    @media (max-width: 480px) {
+    .header a {
+        font-size: 20px; /* Tamaño de fuente para enlaces en pantallas muy pequeñas */
+    }
+
+    .menu a {
+        font-size: 14px; /* Tamaño de fuente para el menú en pantallas muy pequeñas */
+        padding: 8px; /* Espaciado dentro de los elementos del menú */
+    }
+}

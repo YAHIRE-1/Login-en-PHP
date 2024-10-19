@@ -1,0 +1,65 @@
+/* Reseteo de márgenes, padding y box-sizing */
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilos para el body */
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #D9d9d9;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px; /* Ajustado para un diseño más uniforme */
+}
+
+/* Estilos para las cajas dentro del contenedor */
+.container .box {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 20px; /* Ajustado para mejorar el espaciado */
+    margin-right: 40px;
+    margin-left: 40px;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para las imágenes dentro del contenedor */
+.container .imagen {
+    display: flex;
+    justify-content: center; /* Centrando la imagen */
+    align-items: center; /* Alineando verticalmente la imagen */
+    max-width: 35%; 
+    max-height: 20%;z
+    margin: 20px; /* Ajustado para un mejor espaciado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos responsivos para asegurar una buena visualización en pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Coloca los elementos en columna en pantallas pequeñas */
+        gap: 20px; /* Reduce el espacio entre elementos */
+    }
+
+    .container .box {
+        margin-top: 20px;
+        max-width: 100%; /* Asegura que la caja ocupe todo el ancho disponible */
+    }
+
+    .container .imagen {
+        max-width: 80%; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+        max-height: auto; /* Permite que la altura se ajuste automáticamente */
+        margin: 10px; /* Ajusta el margen para mejorar el espaciado */
+    }
+}

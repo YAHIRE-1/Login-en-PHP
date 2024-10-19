@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <link rel="stylesheet" href="Assets/css/styles.css">
+    <link rel="stylesheet" href="Assets/css/normalize.css">
+    <link rel="stylesheet" href="Assets/css/login.css">
+    <link rel="shortcut icon" href="Assets/favicon_io/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <header class="header">
+
+        <a href="./index.html">TESTICAL</a>
+
+        <nav class="nav-links">
+
+            <a href="./login.html">Login</a>
+        
+        </nav>
+
+        <a onclick="openNav()" class="menu" href="#"> <button>Menu</button></a>
+
+        <div class="overlay" id="mobile-menu">
+            <a onclick="closeNav()" href="#" class="close" >&times;</a>
+            <div class="overlay-content">
+                <a href="./galery.html">Our Jobs</a>
+                <a href="./login.html">Login</a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Regístrarse</button>
+                </div>
+            </div>
+
+            <!--Formulario de Login y registro-->
+            <div class="contenedor__login-register">
+                <!--Login-->
+                <form action="php/login.php" method="POST" class="formulario__login">
+                    <h2>Iniciar Sesión</h2>
+                    <input type="email" name="User_Correo" required placeholder="Correo Electronico">
+                    <input type="password" name="User_Password" placeholder="Contraseña">
+                    <button>Entrar</button>
+                </form>
+
+                <!--Register-->
+                <form action="php/register.php" method="POST" class="formulario__register">
+                    <h2>Regístrarse</h2>
+                    <input type="text" name="Id_Name" placeholder="Nombre completo">
+                    <input type="text" name="Name_User" placeholder="Usuario">
+                    <input type="email" name="User_Correo" required placeholder="Correo Electronico">
+                    <input type="password" name="User_Password" placeholder="Contraseña">
+                    <button>Regístrarse</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+<script type="text/javascript" src="Assets/js/nav.js"></script>
+<script type="text/javascript" src="Assets/js/scripts-login.js"></script>
+
+</body>
+</html>
